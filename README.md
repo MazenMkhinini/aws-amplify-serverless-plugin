@@ -1,5 +1,7 @@
 # AWS Amplify Plugin for Serverless Framework
 
+This is a direct fork of https://github.com/amazon-archives/aws-amplify-serverless-plugin
+
 This is a plugin for the [Serverless Framework](https://serverless.com) that generates appropriate configuration files for using [AWS Amplify](https://aws-amplify.github.io) with the Serverless Framework.
 
 ## Installation
