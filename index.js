@@ -135,7 +135,7 @@ class ServerlessAmplifyPlugin {
                     this.log('debug', `Processing ${JSON.stringify(resource)}`);
                     detailedResources.push(resource);   // We have all the details we need for this
                     break;
-                case 'AWS::ApiGateway::RestApi':
+                case 'AWS::ApiGatewayV2::Api':
                     this.log('debug', `Processing ${JSON.stringify(resource)}`);
                     detailedResources.push(resource);
                     break;
@@ -335,7 +335,7 @@ class ServerlessAmplifyPlugin {
             }
         }
 
-        let apigw = resources.filter(r => r.ResourceType === 'AWS::ApiGateway::RestApi');
+        let apigw = resources.filter(r => r.ResourceType === 'AWS::ApiGatewayV2::Api');
         if (apigw.length > 0) {
             let apiRecords = {};
             apigw.forEach((v) => {
@@ -434,7 +434,7 @@ class ServerlessAmplifyPlugin {
             }
         }
 
-        let apigw = resources.filter(r => r.ResourceType === 'AWS::ApiGateway::RestApi');
+        let apigw = resources.filter(r => r.ResourceType === 'AWS::ApiGatewayV2::Api');
         if (apigw.length > 0) {
             let apiRecords = [];
             apigw.forEach((v) => {
